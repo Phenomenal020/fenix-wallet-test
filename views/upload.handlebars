@@ -1,0 +1,20 @@
+{{!< main }}
+
+{{#if success_msg}}
+  <div style="color: green;">{{success_msg}}</div>
+{{/if}}
+
+<form action="/upload" method="POST" enctype="multipart/form-data">
+  <input type="file" name="image" accept="image/*" />
+  <button type="submit">Upload</button>
+</form>
+
+<h3> image render</h3>
+
+<div style="width: 200px; height: 200px">
+  <img
+    src="uploads/{{msg}}"
+    alt="passport photograph"
+    style="height: 200px; width: 200px"
+  />
+</div>
